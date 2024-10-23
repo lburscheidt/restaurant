@@ -1,6 +1,8 @@
+import "./menu_styles.css";
+
 import soup from "./img/laura-limsenkhe-2a1-ttrWiw0-unsplash.jpg";
 import rice from "./img/denise-chan-XEXQokCWiKc-unsplash.jpg";
-import udon from "./udon.jpg";
+import udon from "./img/udon.jpg";
 export function createMenu() {
   let content = document.querySelector("#content");
   let heading = document.createElement("h1");
@@ -8,6 +10,8 @@ export function createMenu() {
   let tagline = document.createElement("p");
   tagline.textContent = "So many dishes, so little time";
 
+  let items = document.createElement("div");
+  items.className = "items";
   let figure_soup = document.createElement("figure");
   let image_soup = document.createElement("img");
   image_soup.src = soup;
@@ -27,17 +31,31 @@ export function createMenu() {
   image_rice.src = rice;
   image_rice.className = "food";
   let figcaption_rice = document.createElement("figcaption");
-  figcaption_rice.textContent = "Our signature udon noodles";
+  figcaption_rice.textContent = "Our fried rice";
+
+  //  image_soup.loading = "lazy";
+  //  image_udon.loading = "lazy";
+  //  image_rice.loading = "lazy";
+
+  image_udon.width = "430px";
+  image_udon.height = "300px";
+
+  image_soup.width = "430px";
+  image_soup.height = "300px";
+
+  image_rice.width = "430px";
+  image_rice.height = "300px";
 
   content.appendChild(heading);
   content.appendChild(tagline);
-  content.appendChild(figure_udon);
+  content.appendChild(items);
+  items.appendChild(figure_udon);
   figure_udon.appendChild(image_udon);
   figure_udon.appendChild(figcaption_udon);
-  content.appendChild(figure_soup);
+  items.appendChild(figure_soup);
   figure_soup.appendChild(image_soup);
   figure_soup.appendChild(figcaption_soup);
-  content.appendChild(figure_rice);
+  items.appendChild(figure_rice);
   figure_rice.appendChild(image_rice);
   figure_rice.appendChild(figcaption_rice);
 }

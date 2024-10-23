@@ -1,3 +1,4 @@
+import "./styles.css";
 export function createContact() {
   let content = document.querySelector("#content");
   let address = document.createElement("div");

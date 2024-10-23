@@ -1,4 +1,6 @@
-import udon from "./udon.jpg";
+import "./styles.css";
+
+import udon from "./img/udon.jpg";
 export function createMain() {
   let content = document.querySelector("#content");
   let heading = document.createElement("h1");
@@ -9,6 +11,9 @@ export function createMain() {
   let image = document.createElement("img");
   image.src = udon;
   image.className = "food";
+
+  image.width = "430px";
+  image.height = "300px";
   let figcaption = document.createElement("figcaption");
   figcaption.textContent = "Our signature udon noodles";
   content.appendChild(heading);

@@ -1,4 +1,4 @@
-import "./styles.css";
+
 import { createMain } from "./main";
 import { createMenu } from "./menu";
 import { createContact } from "./contact";
