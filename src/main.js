@@ -1,5 +1,5 @@
 import udon from "./udon.jpg";
-export function createIndex() {
+export function createMain() {
   let content = document.querySelector("#content");
   let heading = document.createElement("h1");
   heading.textContent = "Naomi's Noodles";

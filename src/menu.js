@@ -1,8 +1,7 @@
+import soup from "./img/laura-limsenkhe-2a1-ttrWiw0-unsplash.jpg";
+import rice from "./img/denise-chan-XEXQokCWiKc-unsplash.jpg";
+import udon from "./udon.jpg";
 export function createMenu() {
-  import soup from "src/img/laura-limsenkhe-2a1-ttrWiw0-unsplash.jpg";
-  import rice from "src/img/denise-chan-XEXQokCWiKc-unsplash.jpg";
-  import udon from "./udon.jpg";
-
   let content = document.querySelector("#content");
   let heading = document.createElement("h1");
   heading.textContent = "Our menu";
@@ -33,9 +32,12 @@ export function createMenu() {
   content.appendChild(heading);
   content.appendChild(tagline);
   content.appendChild(figure_udon);
-  figure.appendChild(image_udon);
-  figure.appendChild(figcaption_udon);
+  figure_udon.appendChild(image_udon);
+  figure_udon.appendChild(figcaption_udon);
   content.appendChild(figure_soup);
-  figure.appendChild(image_soup);
-  figure.appendChild(figcaption_soup);
+  figure_soup.appendChild(image_soup);
+  figure_soup.appendChild(figcaption_soup);
+  content.appendChild(figure_rice);
+  figure_rice.appendChild(image_rice);
+  figure_rice.appendChild(figcaption_rice);
 }
